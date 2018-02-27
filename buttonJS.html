@@ -12,7 +12,7 @@
             <div class="content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-            <button onclick="">Night Mode</button>
+            <button onclick="nightMode()">Night Mode</button>
         </section>
 
         <section id="bb2" class="bigbox">
@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </div>
-            <button onclick="">The Family Blood Line</button>
+            <button onclick="bloodLine()">The Family Blood Line</button>
         </section>
 
         <section id="bb4" class="bigbox">
@@ -68,11 +68,28 @@
     <script type="text/javascript">
         //type your code for each button below the series of comments.  All javascript must be inside the script-tags
         //function 1
-
+        function nightMode(){
+          const doc = document;
+          let section1 = doc.querySelector('#bb1');
+          let subtitle = doc.querySelector('#bb1 > h3');
+          let words = doc.querySelector('#bb1 > div > p');
+          section1.style.backgroundColor = "black";
+          subtitle.style.color = 'white';
+          words.style.color = 'white';
+        }
         //function 2
 
         //function 3
-
+        function bloodLine(){
+          const doc = document;
+          let gpa= doc.querySelector('#bb3 > .content gp');
+          let pops = doc.querySelector('#bb3 > .content gp > .p');
+          let sibling= doc.querySelector('#bb3 > .content gp > .p > .c');
+          gpa.style.backgroundColor ='#550000' ;
+          pops.style.backgroundColor = '#991100' ;
+          sibling[0].style.backgroundColor = '#dd1111';
+          sibling[1].style.backgroundColor = '#dd1111';
+        }
         //function 4
 
         //function 5 & 6
