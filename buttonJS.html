@@ -42,7 +42,7 @@
 
         <section id="bb4" class="bigbox">
             <h3 class="subtitle">Challenge 4</h3>
-            <div class="content">
+            <div class="content poo">
                 <ul>
                     <li>thing 1</li>
                     <li>thing 2</li>
@@ -52,7 +52,7 @@
                     <li class="fish">blue fish</li>
                 </ul>
             </div>
-            <button onclick="">Technicolor Fish</button>
+            <button onclick="fish()">Technicolor Fish</button>
         </section>
 
         <section id="bb5" class="bigbox">
@@ -82,16 +82,25 @@
         //function 3
         function bloodLine(){
           const doc = document;
-          let gpa= doc.querySelector('#bb3 > .content gp');
-          let pops = doc.querySelector('#bb3 > .content gp > .p');
-          let sibling= doc.querySelector('#bb3 > .content gp > .p > .c');
+          let gpa= doc.querySelector('#bb3 > .gp');
+          let pops = doc.querySelector('#bb3 > .gp > .p');
+          let sibling= doc.querySelectorAll('#bb3 > .gp > .p > .c');
           gpa.style.backgroundColor ='#550000' ;
           pops.style.backgroundColor = '#991100' ;
           sibling[0].style.backgroundColor = '#dd1111';
           sibling[1].style.backgroundColor = '#dd1111';
         }
         //function 4
-
+        function fish(){
+          const doc = document;
+          let fish = doc.querySelectorAll('#bb4 > .content > .fish');
+          //let fish1 = fish[2];
+          //let fish2 = fish[3];
+          //fish[0].style.backgroundColor = "orange";
+          //fish[1].style.backgroundColor = "purple";
+          fish[2].style.color = "red";
+          fish[3].style.color = "blue";
+        }
         //function 5 & 6
     </script>
 </html>
