@@ -20,7 +20,7 @@
             <div class="content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-            <button onclick="">Toggle Day/Night Mode</button>
+            <button onclick="toggleDayNight()">Toggle Day/Night Mode</button>
         </section>
 
         <section id="bb3" class="bigbox">
@@ -61,7 +61,7 @@
                 <span>20</span>
             </div>
             <br>
-            <button onclick="">+1</button>
+            <button onclick="math()">+1</button>
             <button onclick="">+10</button>
         </section>
     </body>
@@ -78,6 +78,11 @@
           words.style.color = 'white';
         }
         //function 2
+        function toggleDayNight(){
+            const doc = document;
+            let sectionOne = doc.querySelector('#bb2');
+            sectionOne.classList.toggle("nightMode");
+        }
 
         //function 3
         function bloodLine(){
@@ -93,7 +98,7 @@
         //function 4
         function fish(){
           const doc = document;
-          let fish = doc.querySelectorAll('#bb4 > .content > .fish');
+          let fish = doc.querySelectorAll('.fish');
           //let fish1 = fish[2];
           //let fish2 = fish[3];
           //fish[0].style.backgroundColor = "orange";
@@ -101,6 +106,16 @@
           fish[2].style.color = "red";
           fish[3].style.color = "blue";
         }
-        //function 5 & 6
+        //function 5
+        function math(){
+            const doc = document;
+            let span = doc.querySelector('span');
+            let number = span.firstChild;
+            number = 20;
+            number= number +1;
+            span = number;
+        }
+
+        //function 6
     </script>
 </html>
