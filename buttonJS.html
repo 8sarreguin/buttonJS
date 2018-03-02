@@ -62,7 +62,7 @@
             </div>
             <br>
             <button onclick="math()">+1</button>
-            <button onclick="">+10</button>
+            <button onclick="math2()">+10</button>
         </section>
     </body>
     <script type="text/javascript">
@@ -99,23 +99,29 @@
         function fish(){
           const doc = document;
           let fish = doc.querySelectorAll('.fish');
-          //let fish1 = fish[2];
-          //let fish2 = fish[3];
-          //fish[0].style.backgroundColor = "orange";
-          //fish[1].style.backgroundColor = "purple";
           fish[2].style.color = "red";
           fish[3].style.color = "blue";
         }
         //function 5
         function math(){
             const doc = document;
-            let span = doc.querySelector('span');
-            let number = span.firstChild;
-            number = 20;
-            number= number +1;
-            span = number;
+            //let span = doc.getElementByTagName('span');
+            let updatedNumber = Number(doc.querySelector('span').innerHTML);
+            updatedNumber++;
+            doc.querySelector('span').innerHTML = updatedNumber;
         }
-
+        function math2(){
+            const doc = document;
+            //let span = doc.getElementByTagName('span');
+            let updatedNumber = Number(doc.querySelector('span').innerHTML);
+            updatedNumber = updatedNumber + 10;
+            doc.querySelector('span').innerHTML = updatedNumber;
+        }
         //function 6
+        function tiger(){
+            const doc = document;
+            let section = doc.querySelectorAll(".bigbox");
+            section.style.backgroundImage.
+        }
     </script>
 </html>
