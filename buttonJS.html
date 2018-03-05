@@ -64,6 +64,8 @@
             <button onclick="math()">+1</button>
             <button onclick="math2()">+10</button>
         </section>
+        <button onclick="tiger()">MAGIC</button>
+        <button onclick="largeText()">MAGICX2</button>
     </body>
     <script type="text/javascript">
         //type your code for each button below the series of comments.  All javascript must be inside the script-tags
@@ -99,6 +101,8 @@
         function fish(){
           const doc = document;
           let fish = doc.querySelectorAll('.fish');
+          fish[0].style.color = "green";
+          fish[1].style.color = "orange";
           fish[2].style.color = "red";
           fish[3].style.color = "blue";
         }
@@ -110,6 +114,7 @@
             updatedNumber++;
             doc.querySelector('span').innerHTML = updatedNumber;
         }
+        //function 6
         function math2(){
             const doc = document;
             //let span = doc.getElementByTagName('span');
@@ -117,11 +122,21 @@
             updatedNumber = updatedNumber + 10;
             doc.querySelector('span').innerHTML = updatedNumber;
         }
-        //function 6
+        //function 7 (fun stuff)
         function tiger(){
             const doc = document;
-            let section = doc.querySelectorAll(".bigbox");
-            section.style.backgroundImage.
+            let section = doc.querySelectorAll("section");
+            for (var t = 0; t < section.length; t++) {
+                section[t].classList.toggle("tiger");
+            }
+        }
+
+        function largeText(){
+            const doc = document;
+            let section6 = doc.querySelectorAll('.bigbox');
+            for (var i = 0; i < section6.length; i++) {
+                section6[i].classList.toggle('big');
+            }
         }
     </script>
 </html>

@@ -37,7 +37,15 @@ button{
     color: white;
 }
 
-.dayMode{
-    background-color: white;
-    color: black;
+.tiger{
+    background-image: url(tiger.jpg);
+    color: white;
+}
+.big{
+    font-size: 80px;
+    width: 1000px;
+    height: 1000px;
+    border: 40px solid black;
+    margin: 10px auto;
+    padding: 8px;
 }
