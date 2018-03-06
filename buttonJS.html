@@ -66,6 +66,16 @@
         </section>
         <button onclick="tiger()">MAGIC</button>
         <button onclick="largeText()">MAGICX2</button>
+
+        <section id="bb6" class="bigbox">
+            <h3 class="subtitle">Challenge 6</h3>
+            <div class="content">
+                <span></span>
+            </div>
+            <br>
+            <button onclick="randoColor()">Rando</button>
+        </section>
+        <button onclick="nasty()">NAstY</button>
     </body>
     <script type="text/javascript">
         //type your code for each button below the series of comments.  All javascript must be inside the script-tags
@@ -136,6 +146,33 @@
             let section6 = doc.querySelectorAll('.bigbox');
             for (var i = 0; i < section6.length; i++) {
                 section6[i].classList.toggle('big');
+            }
+        }
+
+        function randoColor(){
+            const doc = document;
+            let firstNumber = String(Math.floor(Math.random() * 10));
+            let secondNumber = String(Math.floor(Math.random() * 10));
+            let thirdNumber = String(Math.floor(Math.random() * 10));
+            let fourthNumber = String(Math.floor(Math.random() * 10));
+            let fifthNumber = String(Math.floor(Math.random() * 10));
+            let sixthNumber = String(Math.floor(Math.random() * 10));
+            let colorNumber = firstNumber + secondNumber + thirdNumber + fourthNumber + fifthNumber + sixthNumber;
+            let rainbow = doc.querySelector('#bb6');
+            rainbow.style.backgroundColor = "#"+colorNumber;
+        }
+        function nasty(){
+            const doc = document;
+            let uno = String(Math.floor(Math.random() * 10));
+            let dos = String(Math.floor(Math.random() * 10));
+            let tres = String(Math.floor(Math.random() * 10));
+            let quatro = String(Math.floor(Math.random() * 10));
+            let cinco = String(Math.floor(Math.random() * 10));
+            let seis = String(Math.floor(Math.random() * 10));
+            let number = uno + dos + tres + quatro + cinco + seis;
+            let rainbow2 = doc.querySelectorAll('.bigbox');
+            for (var k = 0; k < rainbow2.length; k++) {
+                rainbow2[k].style.backgroundColor = "#"+number;
             }
         }
     </script>
