@@ -151,6 +151,7 @@
 
         function randoColor(){
             const doc = document;
+            let rainbow = doc.querySelector('#bb6');
             let firstNumber = String(Math.floor(Math.random() * 10));
             let secondNumber = String(Math.floor(Math.random() * 10));
             let thirdNumber = String(Math.floor(Math.random() * 10));
@@ -158,21 +159,50 @@
             let fifthNumber = String(Math.floor(Math.random() * 10));
             let sixthNumber = String(Math.floor(Math.random() * 10));
             let colorNumber = firstNumber + secondNumber + thirdNumber + fourthNumber + fifthNumber + sixthNumber;
-            let rainbow = doc.querySelector('#bb6');
             rainbow.style.backgroundColor = "#"+colorNumber;
         }
         function nasty(){
             const doc = document;
-            let uno = String(Math.floor(Math.random() * 10));
-            let dos = String(Math.floor(Math.random() * 10));
-            let tres = String(Math.floor(Math.random() * 10));
-            let quatro = String(Math.floor(Math.random() * 10));
-            let cinco = String(Math.floor(Math.random() * 10));
-            let seis = String(Math.floor(Math.random() * 10));
-            let number = uno + dos + tres + quatro + cinco + seis;
+            let uno;
+            let dos;
+            let tres;
+            let quatro;
+            let cinco;
+            let seis;
             let rainbow2 = doc.querySelectorAll('.bigbox');
+            let divv = doc.querySelectorAll('.subtitle');
+            let div2 = doc.querySelectorAll('div');
+
             for (var k = 0; k < rainbow2.length; k++) {
+
+                uno = String(Math.floor(Math.random() * 10));
+                dos = String(Math.floor(Math.random() * 10));
+                tres = String(Math.floor(Math.random() * 10));
+                quatro = String(Math.floor(Math.random() * 10));
+                cinco = String(Math.floor(Math.random() * 10));
+                seis = String(Math.floor(Math.random() * 10));
+                let number = uno + dos + tres + quatro + cinco + seis;
                 rainbow2[k].style.backgroundColor = "#"+number;
+            }
+            for (var i = 0; i < divv.length; i++) {
+                uno = String(Math.floor(Math.random() * 10));
+                dos = String(Math.floor(Math.random() * 10));
+                tres = String(Math.floor(Math.random() * 10));
+                quatro = String(Math.floor(Math.random() * 10));
+                cinco = String(Math.floor(Math.random() * 10));
+                seis = String(Math.floor(Math.random() * 10));
+                let number = uno + dos + tres + quatro + cinco + seis;
+                divv[i].style.color = "#"+number;
+            }
+            for (var l = 0; l < div2.length; l++) {
+                uno = String(Math.floor(Math.random() * 10));
+                dos = String(Math.floor(Math.random() * 10));
+                tres = String(Math.floor(Math.random() * 10));
+                quatro = String(Math.floor(Math.random() * 10));
+                cinco = String(Math.floor(Math.random() * 10));
+                seis = String(Math.floor(Math.random() * 10));
+                let number = uno + dos + tres + quatro + cinco + seis;
+                div2[l].style.backgroundColor = '#'+number;
             }
         }
     </script>
